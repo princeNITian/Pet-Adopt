@@ -4,6 +4,7 @@ import { useLocalSearchParams, useNavigation } from 'expo-router'
 import PetInfo from '../../components/PetDetails/PetInfo';
 import PetSubInfo from '../../components/PetDetails/PetSubInfo';
 import AboutPet from '../../components/PetDetails/AboutPet';
+import OwnerInfo from '../../components/PetDetails/OwnerInfo';
 
 export default function PetDetails() {
     const pet = useLocalSearchParams();
@@ -27,6 +28,8 @@ export default function PetDetails() {
         <AboutPet pet={pet} />
 
         {/* owner deatails */}
+        <OwnerInfo pet={pet} />
+        <View style={{ height: 70 }}></View>
         </ScrollView>
         {/* Adopt me button */}
     </View>
