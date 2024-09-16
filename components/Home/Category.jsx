@@ -11,7 +11,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../config/FirebaseConfig";
 import Colors from "../../constants/Colors";
 
-export default function Category() {
+export default function Category({category}) {
   const [categoryList, setCategoryList] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Cats");
   useEffect(() => {
@@ -46,7 +46,10 @@ export default function Category() {
         numColumns={4}
         renderItem={({ item, index }) => (
           <TouchableOpacity
-            onPress={() => setSelectedCategory(item.name)}
+            onPress={() => {
+              setSelectedCategory(item.name);
+              category(item.name);
+            }}
             style={{ flex: 1 }}
           >
             <View
