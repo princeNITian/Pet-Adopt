@@ -26,7 +26,13 @@ export default function Home() {
       {/* Add New Pet Option */}
       <TouchableOpacity style={styles.addNewPetContainer}>
         <MaterialIcons name="pets" size={24} color={Colors.PRIMARY} />
-        <Text style={{ fontFamily: "outfit-medium",fontSize: 18, color: Colors.PRIMARY }}>
+        <Text
+          style={{
+            fontFamily: "outfit-medium",
+            fontSize: 18,
+            color: Colors.PRIMARY,
+          }}
+        >
           Add New Pet
         </Text>
       </TouchableOpacity>
