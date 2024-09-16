@@ -27,7 +27,7 @@ export default function PetSubInfo({ pet }) {
         <PetSubInfoCard
           icon={require("./../../assets/images/weight.png")}
           title={'Weight'}
-          value={Math.floor(Math.random()*10) + 1 + " Kg"}
+          value={pet?.weight +" Kg"}
         />
       </View>
     </View>
