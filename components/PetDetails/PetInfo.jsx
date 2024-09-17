@@ -3,6 +3,7 @@ import React from "react";
 import Colors from "../../constants/Colors";
 import MarkFav from "../MarkFav";
 
+
 export default function PetInfo({ pet }) {
   return (
     <View>

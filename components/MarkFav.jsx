@@ -4,7 +4,7 @@ import Shared from "../Shared/Shared";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useUser } from "@clerk/clerk-expo";
 
-export default function MarkFav({ pet }) {
+export default function MarkFav({ pet, color='black' }) {
   const { user } = useUser();
   const [favList, setFavList] = useState();
 
@@ -39,7 +39,7 @@ export default function MarkFav({ pet }) {
         </Pressable>
       ) : (
         <Pressable onPress={() => AddToFav()}>
-          <Ionicons name="heart-outline" size={30} color="black" />
+          <Ionicons name="heart-outline" size={30} color={color} />
         </Pressable>
       )}
     </View>
