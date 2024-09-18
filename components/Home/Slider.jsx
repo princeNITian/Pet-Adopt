@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('screen').width * 0.90,
     height: 170,
     borderRadius: 15,
-    marginRight: 15
+    marginRight: 15,
+    objectFit: 'fill'
   },
 });
