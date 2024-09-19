@@ -14,9 +14,12 @@ import Colors from "../../constants/Colors";
 export default function Category({category}) {
   const [categoryList, setCategoryList] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Cats");
+  
   useEffect(() => {
     GetCategoryList();
   }, []);
+
+
   const GetCategoryList = async () => {
     setCategoryList([]);
     const snapshot = await getDocs(collection(db, "Category"));
